@@ -1,5 +1,6 @@
 ! Program to calculate pi using a parallel Monte Carlo method
-! to compile (using intel fortran): mpifort -O3 -fp-model precise -o CalulatePi picalc.f90
+! to compile (using Intel fortran): mpifort -O3 -fp-model precise -o CalulatePi picalc.f90
+! to compile (using GNU fortran): mpifort -O3 -ffree-line-length-none -fstack-arrays -fno-protect-parens -o CalulatePi picalc.f90
 program CalculatePi
 use mpi_f08
 implicit none
