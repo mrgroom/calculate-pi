@@ -54,7 +54,7 @@ pi = 4.d0*rSum/real(N,kind=8)
 rPi = 4.d0*atan(1.d0) ! System value of Pi
 if(iRank.eq.0) then
    print*,'Calculated value of Pi is: ',pi
-   print*,'Error compared to system value of pi: ',abs(pi-rPi)
+   print*,'Error compared to system value of pi: ',abs(pi-rPi)/rPi
 end if
 call MPI_BARRIER(MPI_COMM_WORLD)
 
